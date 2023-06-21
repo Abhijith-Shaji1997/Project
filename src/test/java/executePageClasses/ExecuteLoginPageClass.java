@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import elementRepository.LoginPageClass;
+import retryAnalyzer.RetryAnalyzerClass;
 
 public class ExecuteLoginPageClass extends BaseClass {
 
@@ -22,7 +23,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifySuccessfullLogin() {
 
@@ -36,7 +37,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 	
-	@Test(dataProviderClass = DataProviderLogin.class,dataProvider = "DataProvider1")
+	@Test(dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider1")
 	
 	public void verifyUnSuccessfullLogin(String name,String pass) {
 		

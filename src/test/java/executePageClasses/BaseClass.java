@@ -3,6 +3,7 @@ package executePageClasses;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utility.ScreenShot;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -15,6 +16,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
 public class BaseClass {
@@ -67,9 +69,16 @@ public class BaseClass {
 	}
 
 	@AfterMethod
-	public void afterMethod() {
+	public void afterMethod(ITestResult itr) throws IOException {
+		
+		if(itr.getStatus()==ITestResult.FAILURE) {
+			
+			ScreenShot sc = new ScreenShot();
+			
+			sc.takeScreenShot(driver,itr.getName());
 
 		driver.close();
 	}
 
+	}
 }
