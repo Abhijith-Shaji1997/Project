@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import elementRepository.ClientPageClass;
 import elementRepository.DashboardPage;
 import elementRepository.LoginPageClass;
+import retryAnalyzer.RetryAnalyzerClass;
 
 public class ExexcuteClientPageClass extends BaseClass {
 
@@ -17,7 +18,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 	ClientPageClass cl;
 
-	@Test
+	@Test(groups= {"group3"},retryAnalyzer = RetryAnalyzerClass.class )
 	public void verifyCreateNewClient() {
 
 		lp = new LoginPageClass(driver);
@@ -70,7 +71,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyClientSearchInClientPage() throws IOException {
 

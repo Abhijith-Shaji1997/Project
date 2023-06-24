@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import elementRepository.DashboardPage;
 import elementRepository.LoginPageClass;
+import retryAnalyzer.RetryAnalyzerClass;
 
 public class ExecuteDashBoardPageClass extends BaseClass {
 
@@ -12,7 +13,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 
 	LoginPageClass lp;
 
-	@Test
+	@Test(groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 	public void verifySuccessfullLogin() {
 
 		lp = new LoginPageClass(driver);
@@ -25,7 +26,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 
 	}
 
-	@Test
+	@Test(groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyLoginMessageIsDisplayedOrNot() {
 
@@ -45,7 +46,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 
 	}
 
-	@Test
+	@Test(groups = {"group2"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyLogoInDashBoardIsDisplayedOrNot() {
 
@@ -61,7 +62,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 
 	}
 	
-	@Test
+	@Test(groups = {"group2"},retryAnalyzer = RetryAnalyzerClass.class)
 	
 	public void verifyDeductionIsOpenOrNoT(){
 		

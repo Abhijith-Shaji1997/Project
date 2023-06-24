@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import elementRepository.DashboardPage;
 import elementRepository.DeductionClass;
 import elementRepository.LoginPageClass;
+import retryAnalyzer.RetryAnalyzerClass;
 
 public class ExecuteDeductionPageClass extends BaseClass {
 
@@ -14,7 +15,7 @@ public class ExecuteDeductionPageClass extends BaseClass {
 
 	DeductionClass dc;
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzerClass.class)
 	public void verifyToAddANewDeduction() {
 
 		lp = new LoginPageClass(driver);

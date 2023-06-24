@@ -10,7 +10,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	LoginPageClass lp;
 
-	@Test
+	@Test(groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 	public void verifyTheCurrentPageIsOpenWhileHittingTheUrl() {
 
 		lp = new LoginPageClass(driver);
@@ -23,7 +23,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifySuccessfullLogin() {
 
@@ -37,7 +37,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 	
-	@Test(dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider1")
+	@Test(groups = {"group1"},dataProviderClass = DataProviderLogin.class,dataProvider = "DataProvider1",retryAnalyzer = RetryAnalyzerClass.class)
 	
 	public void verifyUnSuccessfullLogin(String name,String pass) {
 		

@@ -7,6 +7,7 @@ import elementRepository.ClientPageClass;
 import elementRepository.DashboardPage;
 import elementRepository.LoginPageClass;
 import elementRepository.WorkersPageClass;
+import retryAnalyzer.RetryAnalyzerClass;
 
 public class ExecuteWorkersPageClass extends BaseClass {
 
@@ -18,7 +19,7 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 	WorkersPageClass wp;
 
-	@Test
+	@Test(priority = 0,groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 	public void verifyToCreateANewWorker() {
 
 		lp = new LoginPageClass(driver);
@@ -85,7 +86,7 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 	}
 
-	@Test
+	@Test(priority = 1,groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyToSearchAWorker() {
 
@@ -111,7 +112,7 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 	}
 	
-	@Test
+	@Test(priority = 2,groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyDeleteAWorker() {
 
