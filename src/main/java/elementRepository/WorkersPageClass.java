@@ -1,5 +1,7 @@
 package elementRepository;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +11,8 @@ import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 import utility.ExplicitWait;
 import utility.FluentWaitClass;
 import utility.GeneralUtilities;
+import utility.ExcelRead;
+
 
 public class WorkersPageClass {
 
@@ -210,6 +214,61 @@ public class WorkersPageClass {
 		gl.typeElement(postCode, str);
 
 	}
+	
+	
+	public String readFirstName(int r,int c)throws IOException{
+		
+		return ExcelRead.readStringData(r,c);
+	}
+	
+	public String readLastName(int r,int c)throws IOException{
+		
+		return ExcelRead.readStringData(r,c);
+	}
+	
+	public String readDOB(int r,int c)throws IOException{
+		
+		return ExcelRead.readStringData(r,c);
+	}
+	
+	public String readAddress(int r,int c)throws IOException{
+		
+		return ExcelRead.readStringData(r,c);
+	}
+	public String readPhone(int r,int c)throws IOException{
+		
+		return ExcelRead.readIntegerData(r,c);
+	}
+	
+	public String readNiNumber(int r,int c)throws IOException{
+		
+		return ExcelRead.readIntegerData(r,c);
+	}
+	
+	public String readEmail(int r,int c)throws IOException{
+		
+		return ExcelRead.readStringData(r,c);
+	}
+	
+	public String readPostCode(int r,int c)throws IOException{
+	
+	return ExcelRead.readIntegerData(r,c);
+	}
+	public String readAccountName(int r,int c)throws IOException{
+		
+		return ExcelRead.readStringData(r,c);
+	}
+	
+	public String readAccountNumber(int r,int c)throws IOException{
+	
+	return ExcelRead.readIntegerData(r,c);
+	}
+
+	public String readSortCode(int r,int c)throws IOException{
+	
+	return ExcelRead.readStringData(r,c);
+	}
+	
 
 	public void clickNextButton() {
 

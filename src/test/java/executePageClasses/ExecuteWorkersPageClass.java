@@ -1,5 +1,7 @@
 package executePageClasses;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,8 +21,8 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 	WorkersPageClass wp;
 
-	@Test(priority = 0,groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
-	public void verifyToCreateANewWorker() {
+	@Test(priority = 0, groups = { "group1" }, retryAnalyzer = RetryAnalyzerClass.class)
+	public void verifyToCreateANewWorker() throws IOException {
 
 		lp = new LoginPageClass(driver);
 
@@ -40,27 +42,27 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 		wp.selectBranch(1);
 
-		wp.typeFirstName("Abhijith");
+		wp.typeFirstName(wp.readFirstName(10, 1));
 
-		wp.typeLastName("Shaji");
+		wp.typeLastName(wp.readLastName(11, 1));
 
-		wp.typeDateOfBirth("19-12-1997");
+		wp.typeDateOfBirth(wp.readDOB(12, 1));
 
 		wp.selectDivision(1);
 
-		wp.typeAddressLine("Alappuzha,Kerala");
+		wp.typeAddressLine(wp.readAddress(13, 1));
 
 		wp.selectEmploymentType(2);
 
-		wp.typePhoneNumber("7907390262");
+		wp.typePhoneNumber(wp.readPhone(14, 1));
 
 		wp.selectPayslipMethod(1);
 
-		wp.typeEmail("abhijith@gmail.com");
+		wp.typeEmail(wp.readEmail(16, 1));
 
-		wp.typeNiNumber("223344");
+		wp.typeNiNumber(wp.readNiNumber(15, 1));
 
-		wp.typePostCode("688003");
+		wp.typePostCode(wp.readPostCode(17, 1));
 
 		wp.clickNextButton();
 
@@ -68,13 +70,13 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 		wp.clearStartDateBox();
 
-		wp.typeStartDate("11-11-22");
+		wp.typeStartDate("12-07-2022");
 
-		wp.typeAccountName("Abhijith Shaji");
+		wp.typeAccountName(wp.readAccountName(18, 1));
 
-		wp.typeAccountNumber("234243768");
+		wp.typeAccountNumber(wp.readAccountNumber(19, 1));
 
-		wp.typeSortCode("27654");
+		wp.typeSortCode(wp.readSortCode(20, 1));
 
 		wp.clickSaveButton();
 
@@ -86,7 +88,7 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 	}
 
-	@Test(priority = 1,groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(priority = 1, groups = { "group1" }, retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyToSearchAWorker() {
 
@@ -111,8 +113,8 @@ public class ExecuteWorkersPageClass extends BaseClass {
 		Assert.assertTrue(actresult);
 
 	}
-	
-	@Test(priority = 2,groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
+
+	@Test(priority = 2, groups = { "group1" }, retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyDeleteAWorker() {
 
@@ -131,9 +133,9 @@ public class ExecuteWorkersPageClass extends BaseClass {
 		wp.seachByUsingPostCode("688003");
 
 		wp.clickSearchButton();
-		
-	    wp.clickToDeleteWorker();
-		
+
+		wp.clickToDeleteWorker();
+
 		wp.clickToAcceptAlert(driver);
 
 	}
