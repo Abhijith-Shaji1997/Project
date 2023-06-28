@@ -79,7 +79,7 @@ public class BaseClass {
 			
 			sc.takeScreenShot(driver,itr.getName());
 
-		driver.close();
+		driver.quit();
 	}
 	}
 		
