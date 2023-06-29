@@ -127,10 +127,22 @@ public class GeneralUtilities {
 
 		Actions action = new Actions(driver);
 
-		action.sendKeys(element,Keys.ENTER).build().perform();
+		action.sendKeys(element, Keys.ENTER).build().perform();
 
 	}
-	
 
+	public void keyPressTab(WebDriver driver) {
+
+		Actions action = new Actions(driver);
+		
+		action.keyDown(Keys.TAB).build().perform();
+	}
+
+	public void keyPressEnter(WebDriver driver) {
+
+		Actions action = new Actions(driver);
+		
+		action.keyDown(Keys.ENTER).build().perform();
+	}
 
 }

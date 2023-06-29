@@ -112,6 +112,11 @@ public class DashboardPage {
 		gl.clickElement(deduction);
 	}
 	
+	public void clickOnTimeSheetTab() {
+		
+		gl.clickElement(timesheet);
+	}
+	
 	public Boolean isDeductionTabIsOpenOrNoT() {
 		
 		return gl.isDisplayedOfMethod(deductionLogo);
