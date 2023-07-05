@@ -14,7 +14,7 @@ public class DataProviderLogin {
 
 	}
 
-	@DataProvider(name = "DataProvider1")
+	@DataProvider(name = "DataProvider2")
 	public Object[][] dp1() {
 		return new Object[][] { new Object[] { "carol", "1q2w34w" } };
 

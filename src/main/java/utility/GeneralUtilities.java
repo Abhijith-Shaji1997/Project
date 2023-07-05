@@ -20,7 +20,7 @@ public class GeneralUtilities {
 
 	public void clearElement(WebElement element) {
 
-		element.click();
+		element.clear();
 
 	}
 
@@ -119,7 +119,7 @@ public class GeneralUtilities {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].click();");
+		js.executeScript("arguments[0].click();",element);
 
 	}
 

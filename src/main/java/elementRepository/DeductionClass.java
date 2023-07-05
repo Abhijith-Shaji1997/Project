@@ -26,7 +26,7 @@ public class DeductionClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//*[(text()='Add Deduction')]")
+	@FindBy(xpath = "//a[@href='/payrollapp/deduction/create']")
 
 	WebElement addDeduction;
 
@@ -34,15 +34,15 @@ public class DeductionClass {
 
 	WebElement addWorker;
 
-	@FindBy(xpath = "//*[@id='deduction-type']")
+	@FindBy(xpath = "//select[@id='deduction-type']")
 
 	WebElement addType;
 
-	@FindBy(xpath = "//*[@id='deduction-amount']")
+	@FindBy(xpath = "//input[@id='deduction-amount']")
 
 	WebElement addAmount;
 
-	@FindBy(xpath = "//*[@class='btn btn-success']")
+	@FindBy(xpath = "//button[@class='btn btn-success']")
 
 	WebElement saveButton;
 

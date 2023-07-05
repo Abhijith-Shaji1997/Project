@@ -20,7 +20,7 @@ public class LoginPageClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath ="//*[@id='loginform-username']")
+	@FindBy(xpath ="//input[@id='loginform-username']")
 
 	WebElement username;
 
@@ -28,11 +28,11 @@ public class LoginPageClass {
 
 	WebElement password;
 
-	@FindBy(xpath = "//*[@name='login-button']")
+	@FindBy(xpath = "//button[@name='login-button']")
 
 	WebElement login;
 
-	@FindBy(xpath = "//*[@class='dropdown-toggle']")
+	@FindBy(xpath = "//a[@class='dropdown-toggle']")
 
 	WebElement carolThomas;
 

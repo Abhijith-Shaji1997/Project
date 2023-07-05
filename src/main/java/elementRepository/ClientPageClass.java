@@ -12,18 +12,14 @@ import utility.ExplicitWait;
 import utility.FluentWaitClass;
 import utility.GeneralUtilities;
 
-
-
-
-
 public class ClientPageClass {
 
 	WebDriver driver;
 
 	GeneralUtilities gl = new GeneralUtilities();
-	
+
 	ExplicitWait ewait = new ExplicitWait();
-	
+
 	FluentWaitClass fwait = new FluentWaitClass();
 
 	public ClientPageClass(WebDriver driver) {
@@ -65,61 +61,61 @@ public class ClientPageClass {
 
 	WebElement nameOfClient;
 
-	@FindBy(xpath = "//*[@id='client-client_address']")
+	@FindBy(xpath = "//textarea[@id='client-client_address']")
 
 	WebElement address;
 
-	@FindBy(xpath = "//*[@id='client-postcode']")
+	@FindBy(xpath = "//input[@id='client-postcode']")
 
 	WebElement postCode;
 
-	@FindBy(xpath = "//*[@id='client-invoice_contact']")
+	@FindBy(xpath = "//input[@id='client-invoice_contact']")
 
 	WebElement invoiceContact;
 
-	@FindBy(xpath = "//*[@id='client-phone']")
+	@FindBy(xpath = "//input[@id='client-phone']")
 
 	WebElement phoneNumber;
 
-	@FindBy(xpath = "//*[@id='client-email']")
+	@FindBy(xpath = "//input[@id='client-email']")
 
 	WebElement clientMail;
 
-	@FindBy(xpath = "//*[@id='client-company_reg']")
+	@FindBy(xpath = "//input[@id='client-company_reg']")
 
 	WebElement registration;
 
-	@FindBy(xpath = "//*[@id='client-invoice_order']")
+	@FindBy(xpath = "//select[@id='client-invoice_order']")
 
 	WebElement invoiceOrder;
 
-	@FindBy(xpath = "//*[@id='client-invoice_delivery_method']")
+	@FindBy(xpath = "//select[@id='client-invoice_delivery_method']")
 
 	WebElement deliveryMethod;
 
-	@FindBy(xpath = "//*[@id='client-master_document']")
+	@FindBy(xpath = "//select[@id='client-master_document']")
 
 	WebElement masterDocument;
 
-	@FindBy(xpath = "//*[@id='client-settilement_days']")
+	@FindBy(xpath = "//input[@id='client-settilement_days']")
 
 	WebElement clientSettlementDays;
 
-	@FindBy(xpath = "//*[@id='client-vat_rate']")
+	@FindBy(xpath = "//select[@id='client-vat_rate']")
 
 	WebElement vatRate;
 
-	@FindBy(xpath = "//*[(text()='Save')]")
+	@FindBy(xpath = "//button[(text()='Save')]")
 
 	WebElement saveButton;
 
-	@FindBy(xpath = "(//*[(text()='Abhijith')])[4]")
+	@FindBy(xpath = "//table/tbody/tr[3]/td[1]")
 
-	WebElement abhijith;
+	WebElement createClientName;
 
-	@FindBy(xpath = "(//table/tbody/tr/td)[2]")
+	@FindBy(xpath = "//table/tbody/tr/td[2]")
 
-	WebElement displayName;
+	WebElement searchClientName;
 
 	public void cliclOnCreateClientPage() {
 
@@ -212,13 +208,13 @@ public class ClientPageClass {
 
 	public void clickSaveButton() {
 
-		gl.clickElement(saveButton);
+		gl.javaScriptClick(driver, saveButton);
 
 	}
 
-	public Boolean displayName() {
+	public Boolean createClientName() {
 
-		return gl.isDisplayedOfMethod(abhijith);
+		return gl.isDisplayedOfMethod(createClientName);
 
 	}
 
@@ -233,20 +229,53 @@ public class ClientPageClass {
 		gl.clickElement(search);
 	}
 
-	public  Boolean displayNameInTable() {
+	public Boolean displayNameInTable() {
 
-		return gl.isDisplayedOfMethod(displayName);
+		return gl.isDisplayedOfMethod(searchClientName);
 	}
-	
+
 	public String readInvoiceContact(int r, int c) throws IOException {
-		
+
 		return ExcelRead.readIntegerData(r, c);
-		
-		
+
 	}
-	
+
+	public String readClientName(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
+	public String readPhoneNumber(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+
+	}
+
+	public String readClientAddress(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
+	public String readSettlemrntDays(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+	}
+
+	public String readPostCode(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+
+	}
+
+	public String readEmail(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+
+	}
+
+	public String readCompanyReg(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
 }
-
-	
-	
-

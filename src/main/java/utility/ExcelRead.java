@@ -17,7 +17,7 @@ public class ExcelRead {
 public static String readStringData(int i,int j) throws IOException
 
 	{
-		f=new FileInputStream("C:\\Users\\abhir\\eclipse-workspace\\com.superstoreProject\\src\\test\\resources\\Excel.xlsx");
+		f=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Excel.xlsx");
 		w=new XSSFWorkbook(f);
 		s=w.getSheet("Sheet1");
 		Row r=s.getRow(i);   
@@ -27,7 +27,7 @@ public static String readStringData(int i,int j) throws IOException
 	}
 public static String readIntegerData(int i,int j) throws IOException
   {
-	    f=new FileInputStream("C:\\\\Users\\\\abhir\\\\eclipse-workspace\\\\com.superstoreProject\\\\src\\\\test\\\\resources\\\\Excel.xlsx\"");
+	    f=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Excel.xlsx");
 		w=new XSSFWorkbook(f);
 		s=w.getSheet("Sheet1");
 		Row r=s.getRow(i);   

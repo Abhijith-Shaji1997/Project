@@ -33,7 +33,7 @@ public class ExecuteTimeSheetPageClass extends BaseClass {
 		
 		tp.clickOnBrowse();
 
-		tp.uploadAnImage(System.getProperty("user.dir") + "\\src\\test\\resources\\sample.jpg");
+		tp.uploadAnImage(System.getProperty("user.dir") + "\\src\\test\\resources\\Screenshot (1).png");
 	}
 
 }

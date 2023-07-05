@@ -9,31 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">chromeTest</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">42,434</td><td></td><td></td></tr>
+<tr><td><a href="#t0">chromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,003</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">edgeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11,156</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">24,159</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">executePageClasses.ExecuteWorkersPageClass</td><td><a href="#m0">verifyToCreateANewWorker</a></td><td rowspan="1">1687792278792</td><td rowspan="1">4086</td></tr><tr><th colspan="4">chromeTest &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">executePageClasses.ExecuteWorkersPageClass</td><td><a href="#m1">verifyToCreateANewWorker</a></td><td rowspan="1">1687792271077</td><td rowspan="1">4302</td></tr><tr><th colspan="4">chromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">executePageClasses.ExecuteWorkersPageClass</td><td><a href="#m2">verifyDeleteAWorker</a></td><td rowspan="1">1687792304248</td><td rowspan="1">3492</td></tr><tr class="passedeven"><td><a href="#m3">verifyToSearchAWorker</a></td><td rowspan="1">1687792286775</td><td rowspan="1">7730</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">executePageClasses.ExecuteTimeSheetPageClass</td><td><a href="#m0">verifyCreateNewTimeSheet</a></td><td rowspan="1">1688584258437</td><td rowspan="1">5062</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">edgeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">executePageClasses.ExecuteTimeSheetPageClass</td><td><a href="#m1">verifyCreateNewTimeSheet</a></td><td rowspan="1">1688584270592</td><td rowspan="1">4594</td></tr></tbody>
 </table>
-<h2>chromeTest</h2><h3 id="m0">executePageClasses.ExecuteWorkersPageClass#verifyToCreateANewWorker</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: C:\Users\abhir\eclipse-workspace\com.superstoreProject\src\test\resources\Excel.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
-	at utility.ExcelRead.readStringData(ExcelRead.java:20)
-	at elementRepository.WorkersPageClass.readFirstName(WorkersPageClass.java:221)
-	at executePageClasses.ExecuteWorkersPageClass.verifyToCreateANewWorker(ExecuteWorkersPageClass.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">executePageClasses.ExecuteWorkersPageClass#verifyToCreateANewWorker</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: C:\Users\abhir\eclipse-workspace\com.superstoreProject\src\test\resources\Excel.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
-	at utility.ExcelRead.readStringData(ExcelRead.java:20)
-	at elementRepository.WorkersPageClass.readFirstName(WorkersPageClass.java:221)
-	at executePageClasses.ExecuteWorkersPageClass.verifyToCreateANewWorker(ExecuteWorkersPageClass.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">executePageClasses.ExecuteWorkersPageClass#verifyDeleteAWorker</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">executePageClasses.ExecuteWorkersPageClass#verifyToSearchAWorker</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>chromeTest</h2><h3 id="m0">executePageClasses.ExecuteTimeSheetPageClass#verifyCreateNewTimeSheet</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>edgeTest</h2><h3 id="m1">executePageClasses.ExecuteTimeSheetPageClass#verifyCreateNewTimeSheet</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

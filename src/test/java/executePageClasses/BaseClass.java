@@ -38,8 +38,7 @@ public class BaseClass {
 
 	}
 
-	public void f() {
-	}
+
 
 	@Parameters({ "browser" })
 	@BeforeMethod(groups = { " launch "} )

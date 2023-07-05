@@ -6,13 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 import utility.ExplicitWait;
 import utility.FluentWaitClass;
 import utility.GeneralUtilities;
 import utility.ExcelRead;
-
 
 public class WorkersPageClass {
 
@@ -32,87 +29,83 @@ public class WorkersPageClass {
 
 	}
 
-	@FindBy(xpath = "//*[@href='/payrollapp/worker/create']")
+	@FindBy(xpath = "//a[@href='/payrollapp/worker/create']")
 
 	WebElement CreateWorker;
 
-	@FindBy(xpath = "//*[@id='worker-gender']")
+	@FindBy(xpath = "//select[@id='worker-gender']")
 
 	WebElement gender;
 
-	@FindBy(xpath = "//*[@id='worker-branch_id']")
+	@FindBy(xpath = "//select[@id='worker-branch_id']")
 
 	WebElement branch;
 
-	@FindBy(xpath = "//*[@id='worker-first_name']")
+	@FindBy(xpath = "//input[@id='worker-first_name']")
 
 	WebElement firstName;
 
-	@FindBy(xpath = "//*[@id='worker-division_id']")
+	@FindBy(xpath = "//select[@id='worker-division_id']")
 
 	WebElement division;
 
-	@FindBy(xpath = "//*[@id='worker-last_name']")
+	@FindBy(xpath = "//input[@id='worker-last_name']")
 
 	WebElement lastName;
 
-	@FindBy(xpath = "//*[@id='worker-dob']")
+	@FindBy(xpath = "//input[@id='worker-dob']")
 
 	WebElement dateOfBirth;
 
-	@FindBy(xpath = "//*[@id='worker-address1']")
+	@FindBy(xpath = "//input[@id='worker-address1']")
 
 	WebElement addressLine;
 
-	@FindBy(xpath = "//*[@id='worker-employment_type']")
+	@FindBy(xpath = "//select[@id='worker-employment_type']")
 
 	WebElement employmentType;
 
-	@FindBy(xpath = "//*[@id='worker-phone']")
+	@FindBy(xpath = "//input[@id='worker-phone']")
 
 	WebElement phoneNumber;
 
-	@FindBy(xpath = "//*[@id='worker-payslip_method']")
+	@FindBy(xpath = "//select[@id='worker-payslip_method']")
 
 	WebElement paySlipMethod;
 
-	@FindBy(xpath = "//*[@id='worker-email']")
+	@FindBy(xpath = "//input[@id='worker-email']")
 
 	WebElement workersEmail;
 
-	@FindBy(xpath = "//*[@id='worker-postcode']")
+	@FindBy(xpath = "//input[@id='worker-postcode']")
 
 	WebElement postCode;
 
-	@FindBy(xpath = "//*[@id='worker-ni_number']")
+	@FindBy(xpath = "//input[@id='worker-ni_number']")
 
 	WebElement workersNiNumber;
 
-	@FindBy(xpath = "//*[@class='btn btn-success']")
+	@FindBy(xpath = "//button[@class='btn btn-success']")
 
 	WebElement nextButton;
 
-	@FindBy(xpath = "//*[@id='worker-payment_method']")
+	@FindBy(xpath = "//select[@id='worker-payment_method']")
 
 	WebElement paymentMethod;
-
-	@FindBy(xpath = "//*[@id='worker-start_date']")
-
-	WebElement startDate;
 
 	@FindBy(xpath = "//*[@id='worker-ac_name']")
 
 	WebElement accountName;
 
-	@FindBy(xpath = "//*[@id='worker-ac_no']")
+	@FindBy(xpath = "//input[@id='worker-ac_no']")
 
 	WebElement accountNumber;
 
-	@FindBy(xpath = "//*[@id='worker-sort_code']")
+	@FindBy(xpath = "//input[@id='worker-sort_code']")
 
 	WebElement sortCode;
 
-	@FindBy(xpath = "//*[@class='btn btn-success']")
+	@FindBy(xpath = "//button[@class='btn btn-success']")
 
 	WebElement saveButton;
 
@@ -120,24 +113,24 @@ public class WorkersPageClass {
 
 	WebElement workerNameDisplayOrNot;
 
-	@FindBy(xpath = "//*[@id='workersearch-first_name']")
+	@FindBy(xpath = "//input[@id='workersearch-first_name']")
 
 	WebElement searchName;
 
-	@FindBy(xpath = "//*[@id='workersearch-postcode']")
+	@FindBy(xpath = "//input[@id='workersearch-postcode']")
 
 	WebElement postCodeSearch;
 
-	@FindBy(xpath = "//*[(text()='Search')]")
+	@FindBy(xpath = "//button[(text()='Search')]")
 
 	WebElement searchButton;
 
-	@FindBy(xpath = "//*[(text()='Abhijith Shaji')]")
+	@FindBy(xpath = "//table/tbody/tr/td[2]")
 
 	WebElement nameDisplayOrNot;
-	
+
 	@FindBy(xpath = "(//*[@data-method='post'])[2]")
-	
+
 	WebElement deleteWorker;
 
 	public void clickOnCreateWorkers() {
@@ -214,61 +207,61 @@ public class WorkersPageClass {
 		gl.typeElement(postCode, str);
 
 	}
-	
-	
-	public String readFirstName(int r,int c)throws IOException{
-		
-		return ExcelRead.readStringData(r,c);
-	}
-	
-	public String readLastName(int r,int c)throws IOException{
-		
-		return ExcelRead.readStringData(r,c);
-	}
-	
-	public String readDOB(int r,int c)throws IOException{
-		
-		return ExcelRead.readStringData(r,c);
-	}
-	
-	public String readAddress(int r,int c)throws IOException{
-		
-		return ExcelRead.readStringData(r,c);
-	}
-	public String readPhone(int r,int c)throws IOException{
-		
-		return ExcelRead.readIntegerData(r,c);
-	}
-	
-	public String readNiNumber(int r,int c)throws IOException{
-		
-		return ExcelRead.readIntegerData(r,c);
-	}
-	
-	public String readEmail(int r,int c)throws IOException{
-		
-		return ExcelRead.readStringData(r,c);
-	}
-	
-	public String readPostCode(int r,int c)throws IOException{
-	
-	return ExcelRead.readIntegerData(r,c);
-	}
-	public String readAccountName(int r,int c)throws IOException{
-		
-		return ExcelRead.readStringData(r,c);
-	}
-	
-	public String readAccountNumber(int r,int c)throws IOException{
-	
-	return ExcelRead.readIntegerData(r,c);
+
+	public String readFirstName(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
 	}
 
-	public String readSortCode(int r,int c)throws IOException{
-	
-	return ExcelRead.readStringData(r,c);
+	public String readLastName(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
 	}
-	
+
+	public String readDOB(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
+	public String readAddress(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
+	public String readPhone(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+	}
+
+	public String readNiNumber(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+	}
+
+	public String readEmail(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
+	public String readPostCode(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+	}
+
+	public String readAccountName(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
+
+	public String readAccountNumber(int r, int c) throws IOException {
+
+		return ExcelRead.readIntegerData(r, c);
+	}
+
+	public String readSortCode(int r, int c) throws IOException {
+
+		return ExcelRead.readStringData(r, c);
+	}
 
 	public void clickNextButton() {
 
@@ -279,16 +272,6 @@ public class WorkersPageClass {
 
 		gl.selectByIndexDropDown(paymentMethod, index);
 
-	}
-
-	public void clearStartDateBox() {
-
-		gl.clearElement(startDate);
-	}
-
-	public void typeStartDate(String str) {
-
-		gl.typeElement(startDate, str);
 	}
 
 	public void typeAccountName(String str) {
@@ -329,17 +312,17 @@ public class WorkersPageClass {
 
 	public Boolean isNameDisplayedOrNot() {
 
-		 return gl.isDisplayedOfMethod(nameDisplayOrNot);
+		return gl.isDisplayedOfMethod(nameDisplayOrNot);
 
 	}
-	
-	//public void clickToDeleteWorker() {
-		
-		//gl.clickElement(deleteWorker);
-	//}
-	
+
+	// public void clickToDeleteWorker() {
+
+	// gl.clickElement(deleteWorker);
+	// }
+
 	public void clickToAcceptAlert(WebDriver driver) {
-		
+
 		driver.switchTo().alert().accept();
 	}
 
@@ -349,12 +332,9 @@ public class WorkersPageClass {
 	}
 
 	public void clickToDeleteWorker() {
-		
+
 		gl.clickElement(deleteWorker);
-		
-		
+
 	}
 
-		
-	}
-
+}

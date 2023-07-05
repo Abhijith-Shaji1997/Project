@@ -19,7 +19,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 	ClientPageClass cl;
 
 	@Test(groups= {"group3"},retryAnalyzer = RetryAnalyzerClass.class )
-	public void verifyCreateNewClient() {
+	public void verifyCreateNewClient() throws IOException {
 
 		lp = new LoginPageClass(driver);
 
@@ -41,29 +41,29 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 		cl.selectDeliveryMethod(1);
 
-		cl.typeInvoiceContact("123");
+		cl.typeInvoiceContact(cl.readInvoiceContact(1,1));
 
-		cl.typeClientName("Abhijith");
+		cl.typeClientName(cl.readClientName(0, 1));
 
-		cl.typePhoneNumber("7907390262");
+		cl.typePhoneNumber(cl.readPhoneNumber(2, 1));
 
-		cl.typeAddressOfClient("abhinivas kaithavana");
+		cl.typeAddressOfClient(cl.readClientAddress(3, 1));
 
 		cl.selectMasterDocument(1);
 
-		cl.typeClientSettlementDays("3");
+		cl.typeClientSettlementDays(cl.readSettlemrntDays(4, 1));
 
-		cl.typeMail("abhijith123@gmail.com");
+		cl.typeMail(cl.readEmail(5, 1));
 
-		cl.typePostCode("688003");
+		cl.typePostCode(cl.readPostCode(6, 1));
 
-		cl.typeRegistartion("2313314");
+		cl.typeRegistartion(cl.readCompanyReg(7, 1));
 
 		cl.selectVatRate(3);
 
 		cl.clickSaveButton();
 
-		Boolean actresult = cl.displayName();
+		Boolean actresult = cl.createClientName();
 
 		Assert.assertTrue(actresult);
 
@@ -85,7 +85,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 		db.clickOnclientPage();
 
-		cl.typeNameInSearchBox(cl.readInvoiceContact(1, 0));
+		cl.typeNameInSearchBox("Abhijith");
 
 		cl.clickSearchButton();
 

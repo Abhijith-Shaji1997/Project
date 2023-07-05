@@ -67,7 +67,7 @@ public class DashboardPage {
 
 	WebElement settings;
 
-	@FindBy(xpath = "//*[@alt='logo']")
+	@FindBy(xpath = "//img[@src='/payrollapp/images/logo.png']")
 
 	WebElement Logo;
 	

@@ -68,9 +68,9 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 		wp.selectPaymentMethod(0);
 
-		wp.clearStartDateBox();
+		
 
-		wp.typeStartDate("12-07-2022");
+		
 
 		wp.typeAccountName(wp.readAccountName(18, 1));
 
@@ -80,11 +80,10 @@ public class ExecuteWorkersPageClass extends BaseClass {
 
 		wp.clickSaveButton();
 
-		Boolean expresult = true;
 
 		Boolean actresult = wp.IsWorkerNameDisplayedOrNot();
 
-		Assert.assertEquals(expresult, actresult);
+		Assert.assertTrue(actresult);
 
 	}
 
