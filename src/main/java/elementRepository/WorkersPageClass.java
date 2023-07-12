@@ -260,7 +260,7 @@ public class WorkersPageClass {
 
 	public String readSortCode(int r, int c) throws IOException {
 
-		return ExcelRead.readStringData(r, c);
+		return ExcelRead.readIntegerData(r, c);
 	}
 
 	public void clickNextButton() {

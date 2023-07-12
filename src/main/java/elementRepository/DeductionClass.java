@@ -49,6 +49,10 @@ public class DeductionClass {
 	@FindBy(xpath = "//input[@class='select2-search__field']")
 
 	WebElement pleaseSelectTextBox;
+	
+	@FindBy(xpath = "//h1[(text()='Abhijith')]")
+	
+	WebElement createdName;
 
 	public void clicOnAddDeduction() {
 
@@ -87,6 +91,11 @@ public class DeductionClass {
 	public void clickSaveButton() {
 
 		gl.clickElement(saveButton);
+	}
+	
+	public Boolean displayCreatedName() {
+		
+		return gl.isDisplayedOfMethod(createdName);
 	}
 
 }

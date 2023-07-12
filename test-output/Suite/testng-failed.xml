@@ -10,24 +10,11 @@
       <class name="executePageClasses.ExecuteLoginPageClass">
         <methods>
           <include name="afterMethod"/>
-          <include name="createReport"/>
           <include name="beforeMethod"/>
+          <include name="createReport"/>
           <include name="verifyUnSuccessfullLogin"/>
         </methods>
       </class> <!-- executePageClasses.ExecuteLoginPageClass -->
     </classes>
   </test> <!-- chromeTest(failed) -->
-  <test thread-count="5" name="edgeTest(failed)">
-    <parameter name="browser" value="edge"/>
-    <classes>
-      <class name="executePageClasses.ExecuteLoginPageClass">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="createReport"/>
-          <include name="beforeMethod"/>
-          <include name="verifyUnSuccessfullLogin"/>
-        </methods>
-      </class> <!-- executePageClasses.ExecuteLoginPageClass -->
-    </classes>
-  </test> <!-- edgeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,5 +1,6 @@
 package executePageClasses;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import elementRepository.DashboardPage;
@@ -39,6 +40,10 @@ public class ExecuteDeductionPageClass extends BaseClass {
 		dc.addAmountOfWorker("2342");
 		
 		dc.clickSaveButton();
+		
+		Boolean actresult = dc.displayCreatedName();
+		
+		Assert.assertTrue(actresult);
 	}
 
 }
