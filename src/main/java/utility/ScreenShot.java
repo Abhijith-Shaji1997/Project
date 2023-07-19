@@ -25,10 +25,11 @@ public class ScreenShot {
 		File f1 = new File(dest);
 		if (!f1.exists()) {
 			f1.mkdirs();
+		}
 
 			String destinationPath = System.getProperty("user.dir") + "//Test_Evidence//" + name + timeStamp + ".png";
 			File finalDestination = new File(destinationPath);
 			FileHandler.copy(screenShot, finalDestination);
-		}
+		
 	}
 }

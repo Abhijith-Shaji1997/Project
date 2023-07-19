@@ -7,12 +7,12 @@
 	<test thread-count="5" name="chromeTest">
 	  <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <!--<class name="executePageClasses.ExecuteWorkersPageClass"/>-->
+      <class name="executePageClasses.ExecuteWorkersPageClass"/>
       <class name="executePageClasses.ExecuteDeductionPageClass"/>
-      <!--<class name="executePageClasses.ExexcuteClientPageClass"/>
+      <class name="executePageClasses.ExexcuteClientPageClass"/>
       <class name="executePageClasses.ExecuteDashBoardPageClass"/>
       <class name="executePageClasses.ExecuteLoginPageClass"/>
-      <class name="executePageClasses.ExecuteTimeSheetPageClass"/>-->
+      <class name="executePageClasses.ExecuteTimeSheetPageClass"/>
     </classes>
     </test>
   <test thread-count="5" name = "edgeTest"> 

@@ -4,24 +4,28 @@
 	<listeners>
 		<listener class-name="extendReport.TestListener"></listener>
 	</listeners>
-  <test thread-count="5" name="ChromeTest">
-	    <parameter name="browser" value="chrome"></parameter>
-    <classes>
-      <class name="executePageClasses.ExecuteDeductionPageClass"/>
-      <class name="executePageClasses.ExecuteWorkersPageClass"/>
+	<test thread-count="5" name="ChromeTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="executePageClasses.ExecuteDeductionPageClass" />
+			<!--<class name="executePageClasses.ExecuteWorkersPageClass"/>
       <class name="executePageClasses.ExexcuteClientPageClass"/>
       <class name="executePageClasses.ExecuteLoginPageClass"/>
-      <class name="executePageClasses.ExecuteDashBoardPageClass"/>
-    </classes>
-  </test> <!-- Test -->
-  <test thread-count="5" name="EdgeTest">
-	    <parameter name="browser" value="edge"></parameter>
-    <classes>
-      <class name="executePageClasses.ExecuteDeductionPageClass"/>
-      <class name="executePageClasses.ExecuteWorkersPageClass"/>
-      <class name="executePageClasses.ExexcuteClientPageClass"/>
-      <class name="executePageClasses.ExecuteLoginPageClass"/>
-      <class name="executePageClasses.ExecuteDashBoardPageClass"/>
-    </classes>
-    </test>
-</suite> <!-- Suite -->
+      <class name="executePageClasses.ExecuteDashBoardPageClass"/>-->
+		</classes>
+	</test> <!--
+	Test -->
+	<test thread-count="5" name="EdgeTest">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="executePageClasses.ExecuteDeductionPageClass" />
+			<!-- <class name="executePageClasses.ExecuteWorkersPageClass"/>
+			<class name="executePageClasses.ExexcuteClientPageClass"/>
+      <class
+			name="executePageClasses.ExecuteLoginPageClass"/>
+      <class
+			name="executePageClasses.ExecuteDashBoardPageClass"/>-->
+		</classes>
+	</test>
+</suite> <!--
+Suite -->

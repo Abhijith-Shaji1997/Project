@@ -55,7 +55,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 		lp = new LoginPageClass(driver);
 
 		lp.login("carol", "1q2w3e4r");
-
+		
 		Boolean actresult1 = db.isLogoDisplayed();
 
 		Assert.assertTrue(actresult1);

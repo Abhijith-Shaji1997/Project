@@ -71,7 +71,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(groups={"group3"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyClientSearchInClientPage() throws IOException {
 

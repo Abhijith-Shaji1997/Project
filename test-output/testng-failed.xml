@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extendReport.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="grouping(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="launch"/>
+        <include name="group1"/>
+        <include name="group2"/>
+        <include name="group3"/>
+        <include name="close"/>
+      </run>
+    </groups>
     <classes>
-      <class name="executePageClasses.ExecuteLoginPageClass">
+      <class name="executePageClasses.ExecuteDashBoardPageClass">
+        <methods>
+          <include name="verifyDeductionIsOpenOrNoT"/>
+          <include name="afterMethod"/>
+          <include name="verifyLogoInDashBoardIsDisplayedOrNot"/>
+          <include name="verifySuccessfullLogin"/>
+          <include name="createReport"/>
+          <include name="verifyLoginMessageIsDisplayedOrNot"/>
+        </methods>
+      </class> <!-- executePageClasses.ExecuteDashBoardPageClass -->
+      <class name="executePageClasses.ExexcuteClientPageClass">
         <methods>
           <include name="afterMethod"/>
-          <include name="beforeMethod"/>
+          <include name="verifyCreateNewClient"/>
+          <include name="verifyClientSearchInClientPage"/>
           <include name="createReport"/>
-          <include name="verifyTheCurrentPageIsOpenWhileHittingTheUrl"/>
         </methods>
-      </class> <!-- executePageClasses.ExecuteLoginPageClass -->
+      </class> <!-- executePageClasses.ExexcuteClientPageClass -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- grouping(failed) -->
+</suite> <!-- Failed suite [Suite] -->

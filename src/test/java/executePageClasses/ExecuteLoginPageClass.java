@@ -23,8 +23,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 
-	@Test(groups = {
-			"group1" }, dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider2", retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(groups = {"group1" }, dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider2", retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifySuccessfullLogin(String name, String pass) {
 
@@ -38,8 +37,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 
-	@Test(groups = {
-			"group1" }, dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider1", retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(groups = {"group1" }, dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider1", retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyUnSuccessfullLogin(String name, String pass) {
 

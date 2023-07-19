@@ -38,10 +38,8 @@ public class BaseClass {
 
 	}
 
-
-
 	@Parameters({ "browser" })
-	@BeforeMethod(groups = { " launch "} )
+	@BeforeMethod(groups = { " launch " })
 	public void beforeMethod(String browserValue) throws IOException {
 
 		readProperty();
@@ -69,22 +67,22 @@ public class BaseClass {
 
 	}
 
-	@AfterMethod(groups = { "close" })
+	@AfterMethod(groups = {"close"})
 	public void afterMethod(ITestResult itr) throws IOException {
-		
-		if(itr.getStatus()==ITestResult.FAILURE) {
-			
-			ScreenShot sc = new ScreenShot();
-			
-			sc.takeScreenShot(driver,itr.getName());
 
-		driver.quit();
+		if (itr.getStatus() == ITestResult.FAILURE) {
+
+			ScreenShot scrShot = new ScreenShot();
+
+			scrShot .takeScreenShot(driver, itr.getName());
+
+			//driver.quit();
+		}
 	}
-	}
-		
-		@BeforeSuite(alwaysRun = false)
-		public void createReport(final ITestContext testContext) {
-			extendReport.ExtendManager.createInstance().createTest(testContext.getName(), "message");
+
+	@BeforeSuite(alwaysRun = true)
+	public void createReport(final ITestContext testContext) {
+		extendReport.ExtendManager.createInstance().createTest(testContext.getName(), "message");
 
 	}
 }
