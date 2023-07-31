@@ -46,7 +46,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 
 	}
 
-	@Test(groups = {"group2"},retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyLogoInDashBoardIsDisplayedOrNot() {
 
@@ -62,7 +62,7 @@ public class ExecuteDashBoardPageClass extends BaseClass {
 
 	}
 	
-	@Test(groups = {"group2"},retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(groups = {"group1"},retryAnalyzer = RetryAnalyzerClass.class)
 	
 	public void verifyDeductionIsOpenOrNoT(){
 		

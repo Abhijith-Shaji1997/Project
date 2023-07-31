@@ -18,7 +18,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 	ClientPageClass cl;
 
-	@Test(groups= {"group3"},retryAnalyzer = RetryAnalyzerClass.class )
+	@Test(retryAnalyzer = RetryAnalyzerClass.class )
 	public void verifyCreateNewClient() throws IOException {
 
 		lp = new LoginPageClass(driver);
@@ -71,7 +71,7 @@ public class ExexcuteClientPageClass extends BaseClass {
 
 	}
 
-	@Test(groups={"group3"},retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(retryAnalyzer = RetryAnalyzerClass.class)
 
 	public void verifyClientSearchInClientPage() throws IOException {
 

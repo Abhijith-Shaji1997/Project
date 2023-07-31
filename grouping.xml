@@ -13,8 +13,8 @@
 
 				<include name="launch"></include>
 				<include name="group1"></include>
-				<include name="group2"></include>
-				<include name="group3"></include>
+				<!--<include name="group2"></include>
+				<include name="group3"></include>-->
 				<include name="close"></include>
 
 			</run>
@@ -24,7 +24,7 @@
 		<classes>
 
 
-			<class name="executePageClasses.ExexcuteClientPageClass" />
+			<!--<class name="executePageClasses.ExexcuteClientPageClass" />-->
 			<class name="executePageClasses.ExecuteDashBoardPageClass" />
 			<!--<class name="executePageClasses.ExecuteLoginPageClass" />-->
 

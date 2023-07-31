@@ -4,36 +4,18 @@
   <listeners>
     <listener class-name="extendReport.TestListener"/>
   </listeners>
-  <test thread-count="5" name="grouping(failed)">
+  <test thread-count="5" name="chromeTest(failed)">
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="launch"/>
-        <include name="group1"/>
-        <include name="group2"/>
-        <include name="group3"/>
-        <include name="close"/>
-      </run>
-    </groups>
     <classes>
-      <class name="executePageClasses.ExecuteDashBoardPageClass">
+      <class name="executePageClasses.ExecuteLoginPageClass">
         <methods>
-          <include name="verifyDeductionIsOpenOrNoT"/>
           <include name="afterMethod"/>
-          <include name="verifyLogoInDashBoardIsDisplayedOrNot"/>
           <include name="verifySuccessfullLogin"/>
           <include name="createReport"/>
-          <include name="verifyLoginMessageIsDisplayedOrNot"/>
+          <include name="beforeMethod"/>
+          <include name="verifyUnSuccessfullLogin"/>
         </methods>
-      </class> <!-- executePageClasses.ExecuteDashBoardPageClass -->
-      <class name="executePageClasses.ExexcuteClientPageClass">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="verifyCreateNewClient"/>
-          <include name="verifyClientSearchInClientPage"/>
-          <include name="createReport"/>
-        </methods>
-      </class> <!-- executePageClasses.ExexcuteClientPageClass -->
+      </class> <!-- executePageClasses.ExecuteLoginPageClass -->
     </classes>
-  </test> <!-- grouping(failed) -->
+  </test> <!-- chromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

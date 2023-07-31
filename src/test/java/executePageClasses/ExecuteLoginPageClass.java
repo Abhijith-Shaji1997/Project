@@ -10,7 +10,7 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	LoginPageClass lp;
 
-	@Test(groups = { "group1" }, retryAnalyzer = RetryAnalyzerClass.class)
+	@Test( retryAnalyzer = RetryAnalyzerClass.class)
 	public void verifyTheCurrentPageIsOpenWhileHittingTheUrl() {
 
 		lp = new LoginPageClass(driver);
@@ -23,13 +23,13 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 
-	@Test(groups = {"group1" }, dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider2", retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(  retryAnalyzer = RetryAnalyzerClass.class)
 
-	public void verifySuccessfullLogin(String name, String pass) {
+	public void verifySuccessfullLogin() {
 
 		lp = new LoginPageClass(driver);
 
-		lp.login(name, pass);
+		lp.login("carol","1q2w3e4r");
 
 		Boolean actresult = lp.isCaolThomasDisplayed();
 
@@ -37,13 +37,13 @@ public class ExecuteLoginPageClass extends BaseClass {
 
 	}
 
-	@Test(groups = {"group1" }, dataProviderClass = DataProviderLogin.class, dataProvider = "DataProvider1", retryAnalyzer = RetryAnalyzerClass.class)
+	@Test(retryAnalyzer = RetryAnalyzerClass.class)
 
-	public void verifyUnSuccessfullLogin(String name, String pass) {
+	public void verifyUnSuccessfullLogin() {
 
 		lp = new LoginPageClass(driver);
 
-		lp.login(name, pass);
+		lp.login("carol","1q2w34e43");
 
 		String actresult = lp.getTextOfIncorrectOfMessage();
 

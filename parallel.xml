@@ -8,10 +8,10 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="executePageClasses.ExecuteDeductionPageClass" />
-			<!--<class name="executePageClasses.ExecuteWorkersPageClass"/>
-      <class name="executePageClasses.ExexcuteClientPageClass"/>
-      <class name="executePageClasses.ExecuteLoginPageClass"/>
-      <class name="executePageClasses.ExecuteDashBoardPageClass"/>-->
+			<class name="executePageClasses.ExecuteWorkersPageClass" />
+			<class name="executePageClasses.ExexcuteClientPageClass" />
+			<class name="executePageClasses.ExecuteLoginPageClass" />
+			<class name="executePageClasses.ExecuteDashBoardPageClass" />
 		</classes>
 	</test> <!--
 	Test -->
